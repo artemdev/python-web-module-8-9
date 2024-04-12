@@ -13,5 +13,5 @@ class Author(Document):
 class Quote(Document):
     quote = StringField()
     author = ReferenceField(Author, reverse_delete_rule=CASCADE)
-    tags = ListField(StringField(max_length=15))
+    tags = ListField(StringField(max_length=40))
     meta = {"collection": 'quotes'}
